@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Control, Form, Errors, actions } from 'react-redux-form';
+import { Control, Form, Errors } from 'react-redux-form';
+import { Fade, Loop, Random } from 'react-animation-components';
 
 const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
 const minLength = len => val => val && (val.length >= len);
 const isNumber = val => !isNaN(+val);
 const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+const items = ['first', 'second', 'third', 'fourth', 'fifth'];
 
 class Contact extends Component {
 
@@ -49,7 +51,11 @@ class Contact extends Component {
                             <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
                             <BreadcrumbItem active>Contact Us</BreadcrumbItem>
                         </Breadcrumb>
-                        <h2>Contact Us</h2>
+                        <Loop in>
+                            <Fade>
+                                <h2>Contact Us</h2>
+                            </Fade>
+                        </Loop>
                         <hr />
                     </div>
                 </div>

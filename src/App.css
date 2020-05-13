@@ -43,17 +43,17 @@ h2 {
 
 .page-enter {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(0%);
 }
 
 .page-enter-active {
-  opacity: 1;
-  transform: translateX(0%);
+  opacity: 2;
+  transform: translateX(-200%);
   transition: 300ms ease-in;
 }
 
 .page-exit {
-  opacity: 1;
+  opacity: 0;
 }
 
 .page-exit-active {
