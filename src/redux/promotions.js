@@ -1,5 +1,4 @@
 import * as ActionTypes from './ActionTypes';
-import { act } from 'react-dom/test-utils';
 
 export const Promotions = (state = {
     isLoading: true,
